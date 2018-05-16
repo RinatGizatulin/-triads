@@ -14,37 +14,35 @@ int main()
 	std::string mas = "ccaaababbbcaaaaaacccccc"; 	
   
   
-	while (i<=mas.length())   //подсчет кол-ва триад
+	while (i <= mas.length())   //подсчет кол-ва триад
 	{
-		if( mas[i]=='a'&&mas[i+1]=='a'&&mas[i+2]=='a')
+		if( mas[i] == 'a' && mas[i+1] == 'a' && mas[i+2] == 'a')
 		{
 			triada_a++;
-			i=i+3;
+			i = i + 3;
 		}
 		else
-		i=i+1;
+			i = i++;
 	}
-		while (j<=mas.length())
+	while (j <= mas.length())
 	{
-		if( mas[j]=='b'&&mas[j+1]=='b'&&mas[j+2]=='b')
+		if( mas[j] == 'b' && mas[j+1] == 'b' && mas[j+2] == 'b')
 		{
 			triada_b++;
-			j=j+3;
+			j = j + 3;
 		}
 		else
-		{
-		j=j+1;
-		}
+			j = j++;
 	}
-		while (k<=mas.length())
+	while (k <= mas.length())
 	{
-		if( mas[k]=='c'&&mas[k+1]=='c'&&mas[k+2]=='c')
+		if( mas[k] =='c' && mas[k+1] == 'c' && mas[k+2] == 'c')
 		{
 			triada_c++;
-			k=k+3;
+			k = k + 3;
 		}
 		else
-		k=k+1;
+			k = k++;
 	}
 	
 	cout << "Количествово триад буквы a - " << triada_a << endl;
