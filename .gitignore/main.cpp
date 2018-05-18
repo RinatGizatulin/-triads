@@ -1,9 +1,8 @@
 //Дана бесконечная рандомная последовательность из 3 символов: a, b, c
 //посчитать количество триад(трех символов, идущих подряд)
 //каждую триаду считать отдельно и результат вывести
-#include "stdio.h"
-#include "string"
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -11,8 +10,14 @@ int main()
 {
 	setlocale (LC_ALL,"Russian");
 	int i=0, j = 0, k = 0, triada_a = 0, triada_b = 0, triada_c = 0;
-	std::string mas = "ccaaababbbcaaaaaacccccc"; 	
+	int n = 1000000;     						// количество элементов в массиве
+	char *mas = new char[n];
 	
+	for (int l = 0; l < n; l++)     					//заполнение массива
+	{
+		mas[l] = char(randomRange('a', 'c'));	
+	}
+
 	while (i <= mas.length())			//подсчет кол-ва триад a
 	{
 		if( mas[i] == 'a' && mas[i+1] == 'a' && mas[i+2] == 'a')
